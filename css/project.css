@@ -4,6 +4,7 @@
   justify-content: center;
   flex-direction: column;
   gap: 3rem;
+  transform: translateY(100%);
 }
 .landing_wrapper .projects .projects_wrapper {
   width: 100%;

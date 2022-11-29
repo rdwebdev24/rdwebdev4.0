@@ -3,7 +3,7 @@
      .projects{
           background: green;
           @include flexprob(column,center,3rem);
-          // transform: translateY(100%);
+          transform: translateY(100%);
           .projects_wrapper{
                width: 100%;
                max-width: 80vw;
