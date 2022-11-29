@@ -1,0 +1,90 @@
+@import './mixin';
+.landing_wrapper{
+     .projects{
+          background: green;
+          @include flexprob(column,center,3rem);
+          // transform: translateY(100%);
+          .projects_wrapper{
+               width: 100%;
+               max-width: 80vw;
+               height: 55vh;
+               overflow-y: scroll;
+               flex-wrap: wrap;
+               @include flexprob(row,center,2rem);
+               align-items: center;
+               padding: 2rem;
+               &::-webkit-scrollbar{
+                    display: none;
+               }
+               .project_card{
+                    border: 1px solid rgb(10, 156, 10);
+                    box-shadow: 0 0 20px 5px #197019;
+                    width: 15rem;
+                    border-radius: 10px;
+                    @include flexprob(column,center,1rem);
+                    align-items: center;
+                    padding: 1rem;
+                    transform: scale(1);
+                    cursor: pointer;
+                    .project_info{
+                         display: flex;
+                         flex-direction: column;
+                         gap: 0.7rem;
+                         p{
+                              &:nth-child(1){
+                                   font-size: 1.5rem;
+                                   font-weight: bold;
+                              }
+                              &:nth-child(2){
+                                   text-transform: uppercase;
+                              }
+                              &:nth-child(3){
+                                   line-height: 1.2rem;
+                              }
+                         }
+                    }
+                    &:hover{
+                         transform: scale(1.2);
+                    }
+                    .project_img{
+                         width: 100%;
+                         height: 100%;
+                         img{
+                              border-radius: 50%;
+                              width: 100%;
+                              height: 100%;
+                         }
+                    }
+
+               }
+          }
+     }
+}
+
+@media screen and (max-width:1024px) {
+     .landing_wrapper{
+          .projects{
+               .projects_wrapper{
+                    width: 100%;
+                    max-width: 100%;
+               }
+          }
+     }
+}
+@media screen and (max-width:786px) {
+     .landing_wrapper{
+          .projects{
+               .projects_wrapper{
+                    @include flexprob(row,space-around,0rem);
+                    .project_card{
+                         transform: scale(0.8);
+                         &:hover{
+                              transform: scale(1);
+                         }
+                       
+     
+                    }
+               }
+          }
+     }
+}

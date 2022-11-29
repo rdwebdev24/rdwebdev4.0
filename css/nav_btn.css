@@ -1,0 +1,46 @@
+.landing_wrapper .btn-div {
+  bottom: 0;
+  position: absolute;
+  z-index: 99999;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.landing_wrapper .btn-div .btn {
+  padding: 0.8rem 2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+}
+.landing_wrapper .btn-div .btn::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  transition: all 0.3s linear;
+  top: 0;
+  left: 0;
+  border-top: 2px solid #fff;
+}
+.landing_wrapper .btn-div .btn::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  transition: all 0.3s linear;
+  bottom: 0;
+  right: 0;
+  border-bottom: 2px solid #fff;
+  transform-origin: left;
+}
+.landing_wrapper .btn-div .btn:hover::before, .landing_wrapper .btn-div .btn:hover::after {
+  width: 100%;
+}
+
+@media screen and (max-width: 425px) {
+  .landing_wrapper .btn-div {
+    padding-bottom: 0.5rem;
+  }
+  .landing_wrapper .btn-div .btn {
+    padding: 0.5rem;
+  }
+}/*# sourceMappingURL=nav_btn.css.map */

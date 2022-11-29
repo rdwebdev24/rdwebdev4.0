@@ -1,0 +1,45 @@
+@import './mixin';
+.landing_wrapper{
+     .btn-div{
+          bottom: 0;
+          position: absolute;
+          z-index: 99999;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          width: 100%;
+          .btn{
+               padding: 0.8rem 2rem;
+               text-transform: uppercase;
+               cursor: pointer;
+               position: relative;
+               &::before{
+                    @include psedoEle();
+                    top: 0;
+                    left: 0;
+                    border-top: 2px solid #fff;
+               }
+               &::after{
+                    @include psedoEle();
+                    bottom: 0;
+                    right: 0;
+                    border-bottom: 2px solid #fff;
+                    transform-origin: left;
+               }
+               &:hover::before,&:hover::after{
+                    width: 100%;
+               }
+          }
+     }
+}
+
+@media screen and (max-width:425px) {
+     .landing_wrapper{
+          .btn-div{
+               padding-bottom: 0.5rem;
+               .btn{
+                    padding:0.5rem;
+               }
+          }
+     }
+}

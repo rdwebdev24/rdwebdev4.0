@@ -1,0 +1,46 @@
+.landing_wrapper .contact {
+  transform: translateY(-100%);
+  background: purple;
+}
+.landing_wrapper .contact .contact_wrapper {
+  max-width: 60vw;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  gap: 0;
+}
+.landing_wrapper .contact .contact_wrapper .contact_card {
+  border-radius: 5px;
+  box-shadow: 0 0 20px 10px rgba(102, 4, 102, 0.589) inset;
+  padding: 1rem 0;
+  width: 10rem;
+  align-items: center;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.landing_wrapper .contact .contact_wrapper .contact_card i {
+  color: #fff !important;
+  font-size: 4rem;
+}
+.landing_wrapper .contact .contact_wrapper .contact_card a {
+  color: #fff;
+}
+
+@media screen and (max-width: 786px) {
+  .landing_wrapper .contact .contact_wrapper {
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+  .landing_wrapper .contact .contact_wrapper .contact_card {
+    transform: scale(0.8);
+  }
+}
+@media screen and (max-width: 325px) {
+  .landing_wrapper .contact .contact_wrapper .contact_card i {
+    font-size: 2rem;
+  }
+}/*# sourceMappingURL=contact.css.map */

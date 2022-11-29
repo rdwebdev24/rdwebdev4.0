@@ -1,0 +1,54 @@
+@import './mixin';
+.landing_wrapper{
+     .contact{
+          transform: translateY(-100%);
+          background: purple;
+          .contact_wrapper{
+               max-width: 60vw;
+               width: 100%;
+               @include flexprob(row,space-around,0);
+               .contact_card{
+                    border-radius: 5px;
+                    box-shadow: 0 0 20px 10px rgba(102, 4, 102, 0.589) inset;
+                    padding: 1rem 0;
+                    width: 10rem;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    @include flexprob(column,center,1rem);
+                    i{
+                         color: #fff !important;
+                         font-size: 4rem;
+                    }
+                    a{
+                         color: #fff;
+                    }
+               }
+          }
+     }
+}
+@media screen and (max-width:786px) {
+     .landing_wrapper{
+          .contact{
+               .contact_wrapper{
+                    max-width: 100%;
+                    flex-wrap: wrap;
+                    .contact_card{
+                         transform: scale(0.8);
+                    }
+               }
+          }
+     }
+}
+@media screen and (max-width:325px) {
+     .landing_wrapper{
+          .contact{
+               .contact_wrapper{
+                    .contact_card{
+                         i{
+                              font-size: 2rem;
+                         }
+                    }
+               }
+          }
+     }
+}

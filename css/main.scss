@@ -1,0 +1,58 @@
+@import './mixin';
+.landing_wrapper{
+     .main{
+          @include flexprob(column,center,1rem);
+          background: red;
+          align-items: center;
+          padding: 1rem;
+          .info{
+               @include flexprob(column,center,0.5rem);
+               h1{
+                    font-size: 4rem;
+               }
+               h2{
+                    font-size: 3rem;
+               }
+               h3{
+                    font-size: 2rem;
+               }
+          }
+     }
+}
+
+@media screen and (max-width:786px) {
+     .landing_wrapper{
+          .main{
+               @include flexprob(column,center,1rem);
+               .info{
+                    h1{
+                         font-size: 3.5rem;
+                    }
+                    h2{
+                         font-size: 2.5rem;
+                    }
+                    h3{
+                         font-size: 1.5rem;
+                    }
+               }
+          }
+     }
+}
+@media screen and (max-width:425px) {
+     .landing_wrapper{
+          .main{
+               .info{
+                   
+                    h1{
+                         font-size: 2.5rem;
+                    }
+                    h2{
+                         font-size: 2rem;
+                    }
+                    h3{
+                         font-size: 1.2rem;
+                    }
+               }
+          }
+     }
+}
